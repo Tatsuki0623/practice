@@ -35,6 +35,14 @@
             {{ $posts->links() }}
         </div>
         <div>
+            @foreach($questions as $question)
+                <div>
+                    <a href="https://teratail.com/questions/{{ $question['id'] }}">
+                    {{ $question['title'] }}
+                </div>
+            @endforeach
+        </div>
+        <div>
             ログインユーザー：{{ Auth::user()->name }}
         </div>
         <script>
